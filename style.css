@@ -1,0 +1,109 @@
+:root {
+  --fontHeader: "Space Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: var(--fontHeader);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+#reset {
+  display: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+input[type="text"] {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: rgb(211, 211, 211);
+  color: black;
+  border: 0;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: black;
+  color: white;
+  border: 0;
+  margin: 0.5rem 0.5rem;
+}
+
+button {
+  transition-duration: 1s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+h1,
+p,
+h2 {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+button#reset {
+  width: 30%;
+  margin: auto;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+#answerId h2 {
+  margin: 0 1rem;
+  display: inline-block;
+  color: transparent;
+  border-bottom: 0.5rem solid black;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  #answerId h2 {
+    border-bottom: 0.25rem solid black;
+  }
+  img {
+    max-width: 90%;
+  }
+}
