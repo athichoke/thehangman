@@ -53,11 +53,10 @@ function generateButton() {
     buttonSection.appendChild(buttonCreate);
     buttonCreate.addEventListener("click", function () {
       checkAnswer(i);
+      buttonCreate.style.display = "none";
     });
   }
 }
-
-console.log(pointLose);
 
 function checkAnswer(i) {
   const nodeAnswer = document.querySelectorAll("h2");
@@ -124,10 +123,22 @@ reset.addEventListener("click", function () {
   document.getElementById("afterLife").innerHTML = " chances left";
   document.querySelectorAll("h2").forEach(resetFont);
   document.getElementById("hangmanImage").src = "./img/5.jpg";
+  resetButton();
 });
 
 function resetFont(item) {
   item.style.color = "transparent";
+}
+
+function resetButton() {
+  console.log("reset");
+  //const nodeButton = document.getElementById("buttonSection").children; //another choice
+  const nodeButton = document
+    .getElementById("buttonSection")
+    .getElementsByTagName("button");
+  for (let i = 0; i < letter.length; i++) {
+    nodeButton[i].style.display = "inline-block";
+  }
 }
 
 lifeUpdate();
